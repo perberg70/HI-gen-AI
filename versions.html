@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HI gen AI Course Flyer - All Versions</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f0f4f8;
+            color: #333;
+        }
+        .container {
+            max-width: 800px;
+            margin: 2rem auto;
+            background-color: #ffffff;
+            border-radius: 1rem;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        }
+        .header-bg {
+            background: linear-gradient(135deg, #4f46e5, #8b5cf6);
+        }
+        .version-card {
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        .version-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+        }
+    </style>
+</head>
+<body class="p-4">
+
+    <div class="container">
+        
+        <!-- Header -->
+        <header class="header-bg text-white p-6 text-center">
+            <h1 class="text-3xl font-bold mb-2">HI gen AI Course Flyer</h1>
+            <p class="text-xl">All Available Versions</p>
+        </header>
+
+        <!-- Versions List -->
+        <main class="p-6">
+            <div class="grid gap-6">
+                
+                <!-- General Version -->
+                <div class="version-card bg-white border border-gray-200 rounded-lg p-6">
+                    <div class="flex items-start justify-between">
+                        <div class="flex-1">
+                            <h2 class="text-xl font-semibold text-gray-800 mb-2">General Version</h2>
+                            <p class="text-gray-600 mb-4">The original flyer designed for a broad audience including academics, industry professionals, and engineers.</p>
+                            <div class="flex flex-wrap gap-2 mb-4">
+                                <span class="bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded">Academics</span>
+                                <span class="bg-green-100 text-green-800 text-xs px-2 py-1 rounded">Industry</span>
+                                <span class="bg-purple-100 text-purple-800 text-xs px-2 py-1 rounded">Engineers</span>
+                                <span class="bg-yellow-100 text-yellow-800 text-xs px-2 py-1 rounded">Teachers</span>
+                            </div>
+                        </div>
+                        <a href="index.html" class="bg-indigo-500 hover:bg-indigo-600 text-white px-4 py-2 rounded-lg transition duration-200">
+                            View
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Academic Version -->
+                <div class="version-card bg-white border border-gray-200 rounded-lg p-6">
+                    <div class="flex items-start justify-between">
+                        <div class="flex-1">
+                            <h2 class="text-xl font-semibold text-gray-800 mb-2">Academic Version</h2>
+                            <p class="text-gray-600 mb-4">Tailored specifically for university staff, researchers, and academic environments with focus on research and teaching applications.</p>
+                            <div class="flex flex-wrap gap-2 mb-4">
+                                <span class="bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded">Researchers</span>
+                                <span class="bg-green-100 text-green-800 text-xs px-2 py-1 rounded">Faculty</span>
+                                <span class="bg-purple-100 text-purple-800 text-xs px-2 py-1 rounded">PhD Students</span>
+                                <span class="bg-yellow-100 text-yellow-800 text-xs px-2 py-1 rounded">Admin Staff</span>
+                            </div>
+                        </div>
+                        <a href="index-academic.html" class="bg-indigo-500 hover:bg-indigo-600 text-white px-4 py-2 rounded-lg transition duration-200">
+                            View
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Industry Version -->
+                <div class="version-card bg-white border border-gray-200 rounded-lg p-6">
+                    <div class="flex items-start justify-between">
+                        <div class="flex-1">
+                            <h2 class="text-xl font-semibold text-gray-800 mb-2">Industry Version</h2>
+                            <p class="text-gray-600 mb-4">Designed for business professionals and corporate environments with focus on business applications and competitive advantage.</p>
+                            <div class="flex flex-wrap gap-2 mb-4">
+                                <span class="bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded">Business Leaders</span>
+                                <span class="bg-green-100 text-green-800 text-xs px-2 py-1 rounded">Marketing</span>
+                                <span class="bg-purple-100 text-purple-800 text-xs px-2 py-1 rounded">Operations</span>
+                                <span class="bg-yellow-100 text-yellow-800 text-xs px-2 py-1 rounded">Product</span>
+                            </div>
+                        </div>
+                        <a href="index-industry.html" class="bg-indigo-500 hover:bg-indigo-600 text-white px-4 py-2 rounded-lg transition duration-200">
+                            View
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Instructions -->
+            <div class="mt-8 p-4 bg-gray-50 rounded-lg">
+                <h3 class="font-semibold text-gray-800 mb-2">How to Use These Versions:</h3>
+                <ul class="text-sm text-gray-600 space-y-1">
+                    <li>• <strong>General Version:</strong> Use for broad marketing and general audiences</li>
+                    <li>• <strong>Academic Version:</strong> Target university staff, researchers, and educational institutions</li>
+                    <li>• <strong>Industry Version:</strong> Focus on business professionals and corporate clients</li>
+                    <li>• All versions maintain the same responsive design and core messaging</li>
+                    <li>• Each version can be further customized as needed</li>
+                </ul>
+            </div>
+
+        </main>
+
+        <!-- Footer -->
+        <footer class="bg-gray-800 text-white p-4 text-center text-sm">
+            <p>© Chalmers University of Technology | All versions are responsive and print-friendly</p>
+        </footer>
+
+    </div>
+
+</body>
+</html> 
