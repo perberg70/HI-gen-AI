@@ -15,9 +15,9 @@
         }
         .container {
             max-width: 900px;
-            margin: 2rem auto;
+            margin: 1rem auto;
             background-color: #ffffff;
-            border-radius: 1.5rem; /* More rounded corners */
+            border-radius: 1rem; /* Slightly less rounded for better mobile */
             box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
             overflow: hidden; /* Ensures rounded corners apply correctly */
         }
@@ -29,7 +29,7 @@
             border-bottom: 2px solid #a78bfa; /* Light purple underline */
         }
         .illustration-title {
-            font-size: clamp(1.5rem, 5vw, 3rem); /* Responsive font size */
+            font-size: clamp(1.25rem, 4vw, 2.5rem); /* More responsive font size */
             font-weight: 700;
             text-align: center;
             color: #312e81; /* Dark indigo */
@@ -40,50 +40,64 @@
         }
         .chalmers-logo {
             width: 100%;
-            max-width: 200px;
+            max-width: 150px; /* Smaller on mobile */
             height: auto;
             margin-bottom: 1rem;
             background-color: white;
             padding: 5px;
             border-radius: 0.5rem;
         }
+        /* Enhanced responsive utilities */
+        .responsive-text {
+            font-size: clamp(0.875rem, 2.5vw, 1.125rem);
+        }
+        .responsive-heading {
+            font-size: clamp(1.5rem, 4vw, 2.5rem);
+        }
+        .responsive-subheading {
+            font-size: clamp(1rem, 3vw, 1.5rem);
+        }
+        /* Print styles for better printing */
+        @media print {
+            body { background-color: white; }
+            .container { box-shadow: none; margin: 0; }
+        }
     </style>
 </head>
-<body class="p-4 sm:p-6 md:p-8">
+<body class="p-2 sm:p-4 md:p-6 lg:p-8">
 
-    <div class="container p-6 sm:p-8 lg:p-10">
+    <div class="container p-4 sm:p-6 md:p-8 lg:p-10">
 
         <!-- Header Section -->
-        <header class="header-bg text-white p-6 sm:p-8 rounded-t-xl text-center">
+        <header class="header-bg text-white p-4 sm:p-6 md:p-8 rounded-t-lg sm:rounded-t-xl text-center">
             <div class="relative">
-                <img src="https://i.imgur.com/nGiyI1V.png" alt="Chalmers University of Technology Logo" class="chalmers-logo absolute top-0 right-0 h-full object-contain">
-                <div class="text-center">
-                    <h1 class="text-4xl sm:text-5xl md:text-6xl font-bold mb-2 leading-tight">HI gen AI</h1>
-                    <p class="text-xl sm:text-2xl font-light">Human Intelligence & Generative AI</p>
-                    <p class="mt-4 text-md sm:text-lg italic">A Hands-On Course in Navigating & Using Generative AI at Work</p>
+                <img src="https://i.imgur.com/nGiyI1V.png" alt="Chalmers University of Technology Logo" class="chalmers-logo absolute top-0 right-0 h-full object-contain opacity-90">
+                <div class="text-center pr-0 sm:pr-32 md:pr-40"> <!-- Responsive padding for logo space -->
+                    <h1 class="responsive-heading font-bold mb-2 leading-tight">HI gen AI</h1>
+                    <p class="responsive-subheading font-light">Human Intelligence & Generative AI</p>
+                    <p class="mt-2 sm:mt-4 text-sm sm:text-base md:text-lg italic">A Hands-On Course in Navigating & Using Generative AI at Work</p>
                 </div>
             </div>
         </header>
 
         <!-- Main Content -->
-        <main class="p-6 sm:p-8 lg:p-10">
+        <main class="p-4 sm:p-6 md:p-8 lg:p-10">
 
-            <!-- AI-Human Connection Illustration: Directly using the provided image -->
-            <section class="mb-10 text-center">
-                <h2 class="illustration-title mb-6">Ignite Your Ideas with AI Partnership!</h2>
-                <div class="flex justify-center items-center p-4">
-                    <!-- Corrected image source path -->
-                    <img src="https://i.imgur.com/VOyzKJ4.jpeg" alt="AI-Human Connection Illustration" class="max-w-full h-auto rounded-lg shadow-xl" style="max-height: 50vh;" onerror="this.onerror=null;this.src='https://placehold.co/400x300/e0e0e0/555555?text=Illustration+Loading+Error';" />
+            <!-- AI-Human Connection Illustration -->
+            <section class="mb-6 sm:mb-8 md:mb-10 text-center">
+                <h2 class="illustration-title mb-4 sm:mb-6">Ignite Your Ideas with AI Partnership!</h2>
+                <div class="flex justify-center items-center p-2 sm:p-4">
+                    <img src="https://i.imgur.com/VOyzKJ4.jpeg" alt="AI-Human Connection Illustration" class="max-w-full h-auto rounded-lg shadow-xl" style="max-height: 40vh; min-height: 200px;" onerror="this.onerror=null;this.src='https://placehold.co/400x300/e0e0e0/555555?text=Illustration+Loading+Error';" />
                 </div>
-                <p class="text-lg text-gray-700 mt-4 max-w-2xl mx-auto">
-                    Experience the synergy of human creativity and AI power. This course empowers you to responsibly leverage Generative AI to unlock new ideas and drive innovation in your work.
+                <p class="responsive-text text-gray-700 mt-3 sm:mt-4 max-w-2xl mx-auto px-2">
+                    Experience the synergy of human creativity and the power of AI. This course empowers you to responsibly leverage Generative AI to unlock new ideas and drive innovation in your work.
                 </p>
             </section>
 
             <!-- Why this course why now? -->
-            <section class="mb-8">
-                <h2 class="text-2xl font-semibold mb-4 pb-2 section-title">Why This Course, Why Now?</h2>
-                <ul class="list-disc list-inside text-gray-700 space-y-2">
+            <section class="mb-6 sm:mb-8">
+                <h2 class="text-xl sm:text-2xl font-semibold mb-3 sm:mb-4 pb-2 section-title">Why This Course, Why Now?</h2>
+                <ul class="list-disc list-inside text-gray-700 space-y-2 responsive-text">
                     <li>Generative AI is already embedded in everyday workflows: 75% of knowledge-workers use GenAI tools, and two-thirds of managers now expect AI skills.</li>
                     <li>Lack of competence is cited by KPMG as an "enterprise-critical risk" for two-thirds of firms.</li>
                     <li>This practice-rich course equips staff to test, adopt and govern GenAI responsibly, turning curiosity into confident, value-adding use.</li>
@@ -91,36 +105,36 @@
             </section>
 
             <!-- Who should attend? -->
-            <section class="mb-8">
-                <h2 class="text-2xl font-semibold mb-4 pb-2 section-title">Who Should Attend?</h2>
-                <p class="text-gray-700 mb-4">Ideal for professionals who wish to deepen practical AI skills. No coding background required; post-secondary education recommended.</p>
-                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                    <div class="profession-card p-4 rounded-lg">
-                        <h3 class="font-bold text-lg mb-1">Academic (University Staff)</h3>
-                        <p class="text-sm text-gray-600">Enhance research, teaching, and administrative tasks with AI.</p>
+            <section class="mb-6 sm:mb-8">
+                <h2 class="text-xl sm:text-2xl font-semibold mb-3 sm:mb-4 pb-2 section-title">Who Should Attend?</h2>
+                <p class="text-gray-700 mb-4 responsive-text">Ideal for professionals who wish to deepen practical AI skills. No coding background required; post-secondary education recommended.</p>
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4">
+                    <div class="profession-card p-3 sm:p-4 rounded-lg">
+                        <h3 class="font-bold text-base sm:text-lg mb-1">Academics (University Staff)</h3>
+                        <p class="text-xs sm:text-sm text-gray-600">Enhance research, teaching, and administrative tasks with AI.</p>
                     </div>
-                    <div class="profession-card p-4 rounded-lg">
-                        <h3 class="font-bold text-lg mb-1">High School (Teachers & Employees)</h3>
-                        <p class="text-sm text-gray-600">Integrate AI effectively into education and school operations.</p>
+                    <div class="profession-card p-3 sm:p-4 rounded-lg">
+                        <h3 class="font-bold text-base sm:text-lg mb-1">High School (Teachers & Employees)</h3>
+                        <p class="text-xs sm:text-sm text-gray-600">Integrate AI effectively into education and school operations.</p>
                     </div>
-                    <div class="profession-card p-4 rounded-lg">
-                        <h3 class="font-bold text-lg mb-1">Industry Professionals</h3>
-                        <p class="text-sm text-gray-600">Drive innovation and efficiency across various sectors.</p>
+                    <div class="profession-card p-3 sm:p-4 rounded-lg">
+                        <h3 class="font-bold text-base sm:text-lg mb-1">Industry Professionals</h3>
+                        <p class="text-xs sm:text-sm text-gray-600">Drive innovation and efficiency across various sectors.</p>
                     </div>
-                    <div class="profession-card p-4 rounded-lg">
-                        <h3 class="font-bold text-lg mb-1">Engineers</h3>
-                        <p class="text-sm text-gray-600">Leverage AI for design, development, and problem-solving.</p>
+                    <div class="profession-card p-3 sm:p-4 rounded-lg">
+                        <h3 class="font-bold text-base sm:text-lg mb-1">Engineers</h3>
+                        <p class="text-xs sm:text-sm text-gray-600">Leverage AI for design, development, and problem-solving.</p>
                     </div>
                 </div>
             </section>
 
             <!-- Learning Outcomes & Certification -->
-            <section class="mb-8">
-                <h2 class="text-2xl font-semibold mb-4 pb-2 section-title">What You'll Learn & Achieve</h2>
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <section class="mb-6 sm:mb-8">
+                <h2 class="text-xl sm:text-2xl font-semibold mb-3 sm:mb-4 pb-2 section-title">What You'll Learn & Achieve</h2>
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8">
                     <div>
-                        <h3 class="font-bold text-xl text-gray-800 mb-2">Key Learning Outcomes:</h3>
-                        <ul class="list-disc list-inside text-gray-700 space-y-2">
+                        <h3 class="font-bold text-lg sm:text-xl text-gray-800 mb-2">Key Learning Outcomes:</h3>
+                        <ul class="list-disc list-inside text-gray-700 space-y-2 responsive-text">
                             <li>Use GenAI safely & effectively for everyday work tasks.</li>
                             <li>Map AI opportunities & pitfalls in your own role (bias, privacy, etc.).</li>
                             <li>Design smart prompts & simple agents, build a basic custom chatbot.</li>
@@ -129,8 +143,8 @@
                         </ul>
                     </div>
                     <div>
-                        <h3 class="font-bold text-xl text-gray-800 mb-2">Certification & Compliance:</h3>
-                        <ul class="list-disc list-inside text-gray-700 space-y-2">
+                        <h3 class="font-bold text-lg sm:text-xl text-gray-800 mb-2">Certification & Compliance:</h3>
+                        <ul class="list-disc list-inside text-gray-700 space-y-2 responsive-text">
                             <li>Successful participants receive a verifiable Chalmers Micro-Credential (5 ECTS-equivalent) and LinkedIn-ready badge.</li>
                             <li>This course is designed to ensure participants satisfy the EU AI Act conditions for responsible AI usage.</li>
                             <li>Digital diploma after completing set exercises and attending 1 live & peer session.</li>
@@ -140,9 +154,9 @@
             </section>
 
             <!-- Course Details at a Glance -->
-            <section class="mb-8">
-                <h2 class="text-2xl font-semibold mb-4 pb-2 section-title">At a Glance</h2>
-                <div class="text-gray-700 space-y-2">
+            <section class="mb-6 sm:mb-8">
+                <h2 class="text-xl sm:text-2xl font-semibold mb-3 sm:mb-4 pb-2 section-title">At a Glance</h2>
+                <div class="text-gray-700 space-y-2 responsive-text">
                     <p><span class="font-bold">Workload:</span> 25 hours (incl. 5-10 hours profession-specific practice)</p>
                     <p><span class="font-bold">Format:</span> Self-paced online modules, 3 live hybrid sessions, 3 peer-learning circles, guest lecturers from the tech-industry.</p>
                     <p><span class="font-bold">Language:</span> English and Swedish</p>
@@ -154,18 +168,18 @@
         </main>
 
         <!-- Footer Section -->
-        <footer class="bg-gray-800 text-white p-6 sm:p-8 rounded-b-xl text-center">
-            <h3 class="text-xl font-semibold mb-3">Ready to Transform Your Work with AI?</h3>
-            <p class="text-lg mb-4">Equip your workforce to explore, evaluate and exploit Generative AI – responsibly, creatively and with confidence.</p>
-            <div class="flex flex-col sm:flex-row justify-center items-center gap-4">
-                <a href="mailto:genai-courses@chalmers.se" class="bg-indigo-500 hover:bg-indigo-600 text-white font-bold py-3 px-6 rounded-full transition duration-300 shadow-lg">
+        <footer class="bg-gray-800 text-white p-4 sm:p-6 md:p-8 rounded-b-lg sm:rounded-b-xl text-center">
+            <h3 class="text-lg sm:text-xl font-semibold mb-2 sm:mb-3">Ready to Transform Your Work with AI?</h3>
+            <p class="responsive-text mb-3 sm:mb-4">Equip your workforce to explore, evaluate and exploit Generative AI – responsibly, creatively and with confidence.</p>
+            <div class="flex flex-col sm:flex-row justify-center items-center gap-3 sm:gap-4">
+                <a href="mailto:genai-courses@chalmers.se" class="bg-indigo-500 hover:bg-indigo-600 text-white font-bold py-2 sm:py-3 px-4 sm:px-6 rounded-full transition duration-300 shadow-lg text-sm sm:text-base w-full sm:w-auto">
                     Course Enquiries
                 </a>
-                <a href="www.chalmers.se/genai-hands-on" target="_blank" class="bg-yellow-500 hover:bg-yellow-600 text-gray-900 font-bold py-3 px-6 rounded-full transition duration-300 shadow-lg">
+                <a href="www.chalmers.se/genai-hands-on" target="_blank" class="bg-yellow-500 hover:bg-yellow-600 text-gray-900 font-bold py-2 sm:py-3 px-4 sm:px-6 rounded-full transition duration-300 shadow-lg text-sm sm:text-base w-full sm:w-auto">
                     Apply Online (Opens 1 Aug 2025)
                 </a>
             </div>
-            <p class="mt-6 text-sm text-gray-400">© Chalmers University of Technology</p>
+            <p class="mt-4 sm:mt-6 text-xs sm:text-sm text-gray-400">© Chalmers University of Technology</p>
         </footer>
 
     </div>
